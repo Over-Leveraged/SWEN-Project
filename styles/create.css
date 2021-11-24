@@ -1,0 +1,34 @@
+.container{
+
+}
+
+.column{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+form{
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+input{
+    padding:1em 0.5em;
+    width:25em;
+    margin:20px 0;
+
+
+}
+
+#btn{
+    padding:1em 0.5em;
+}
+
+label{
+    text-transform: capitalize;
+    font-weight: 700;
+}

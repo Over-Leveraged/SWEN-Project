@@ -2,8 +2,8 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 24, 2021 at 08:03 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 28, 2021 at 04:17 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `addRec`
+-- Table structure for table `addrec`
 --
 
-CREATE TABLE `addRec` (
+CREATE TABLE `addrec` (
   `id` int(11) NOT NULL,
   `fname` varchar(250) DEFAULT NULL,
   `lname` varchar(250) DEFAULT NULL,
@@ -49,6 +49,32 @@ CREATE TABLE `addRec` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `addrec`
+--
+
+INSERT INTO `addrec` (`id`, `fname`, `lname`, `company`, `position`, `service_lenght`, `avsec_dates`, `avsec_grades`, `medical_doc`, `medical_doc_path`, `medical_doc_expire`, `psra_doc`, `psra_doc_path`, `psra_doc_expire`, `police_rec_doc`, `police_rec_doc_path`, `police_rec_doc_expire`, `recommenedBy`, `createdAt`) VALUES
+(8, 'tahjay', 'thompson', 'tazzuda', 'ceo', '737', '2021-11-23', '1', 'info2180-lecture-7.pdf', 'upload/info2180-lecture-7.pdf', '2021-11-17', 0x696e666f323138302d6c6563747572652d352e706466, 'upload/info2180-lecture-6.pdf', '2021-11-19', 0x696e666f323138302d6c6563747572652d362e706466, 'upload/info2180-lecture-5.pdf', '2021-11-15', '2021-11-27', '2021-11-24 21:29:47'),
+(9, 'tahjay', 'thompson', 'tazzuda', 'ceo', '737', '2021-11-23', '1', 'info2180-lecture-7.pdf', 'upload/info2180-lecture-7.pdf', '2021-11-17', 0x696e666f323138302d6c6563747572652d352e706466, 'upload/info2180-lecture-6.pdf', '2021-11-19', 0x696e666f323138302d6c6563747572652d362e706466, 'upload/info2180-lecture-5.pdf', '2021-11-15', '2021-11-27', '2021-11-24 21:29:58'),
+(10, 'tahjay', 'thompson', 'tazzuda', 'ceo', '737', '2021-11-23', '1', 'info2180-lecture-7.pdf', 'upload/info2180-lecture-7.pdf', '2021-11-17', 0x696e666f323138302d6c6563747572652d352e706466, 'upload/info2180-lecture-6.pdf', '2021-11-19', 0x696e666f323138302d6c6563747572652d362e706466, 'upload/info2180-lecture-5.pdf', '2021-11-15', '2021-11-27', '2021-11-24 21:30:04'),
+(11, 'tahjay', 'thompson', 'tazzuda', 'ceo', '737', '2021-11-23', '1', 'info2180-lecture-7.pdf', 'upload/info2180-lecture-7.pdf', '2021-11-17', 0x696e666f323138302d6c6563747572652d352e706466, 'upload/info2180-lecture-6.pdf', '2021-11-19', 0x696e666f323138302d6c6563747572652d362e706466, 'upload/info2180-lecture-5.pdf', '2021-11-15', '2021-11-27', '2021-11-24 21:31:16'),
+(12, 'tahjay', 'thompson', 'tazzuda', 'ceo', '737', '2021-11-23', '1', 'info2180-lecture-7.pdf', 'upload/info2180-lecture-7.pdf', '2021-11-17', 0x696e666f323138302d6c6563747572652d352e706466, 'upload/info2180-lecture-6.pdf', '2021-11-19', 0x696e666f323138302d6c6563747572652d362e706466, 'upload/info2180-lecture-5.pdf', '2021-11-15', '2021-11-27', '2021-11-24 21:36:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `training`
+--
+
+CREATE TABLE `training` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(250) NOT NULL,
+  `lname` varchar(250) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `reason` text NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- --------------------------------------------------------
 
 --
@@ -63,13 +89,30 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(1, 'awalsh', 'awalsh@test.com', '482c811da5d5b4bc6d497ffa98491e38'),
+(2, 'tthompson', 'tthompson@test.com', '482c811da5d5b4bc6d497ffa98491e38'),
+(3, 'jsmith', 'jsmith@test.com', '482c811da5d5b4bc6d497ffa98491e38'),
+(4, 'dforbes', 'dforbes@test.com', '482c811da5d5b4bc6d497ffa98491e38'),
+(5, 'jcalvin', 'jcalvin@test.com', '482c811da5d5b4bc6d497ffa98491e38');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `addRec`
+-- Indexes for table `addrec`
 --
-ALTER TABLE `addRec`
+ALTER TABLE `addrec`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `training`
+--
+ALTER TABLE `training`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -83,10 +126,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `addRec`
+-- AUTO_INCREMENT for table `addrec`
 --
-ALTER TABLE `addRec`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `addrec`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `training`
+--
+ALTER TABLE `training`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

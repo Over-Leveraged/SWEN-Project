@@ -5,14 +5,14 @@ window.onload=function(){
 }
 
 var httpRequest = new XMLHttpRequest();
-var url = "randomizer.php";
+//var url = "randomizer.php";
 
 function handleClick(e){
 
     e.preventDefault();
     
 
-    var url = "randomizer.php";
+    var url = "../SWEN-Project/randomizer/randomizer.php"
     //var location= document.getElementById("fillerForLocationName").value;
    // location=location.trim();
     

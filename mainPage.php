@@ -4,16 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link href="mstyles.css" rel="stylesheet" type="text/css">
+        <link href="styles/mstyles.css" rel="stylesheet" type="text/css">
         <script></script>
     </head>
     <body> 
         <section class = "header">
             <nav>
-                <h1 class = "sysname"><a href = "mainPage.html">GDBS</a></h1>
+                <h1 class = "sysname"><a href = "mainPage.php">GDBS</a></h1>
                 <div class = "navBar"> 
                     <ul> 
-                        <li><a href = "">  Send Updates </a></li>
+                        <li><a href = "notification.php">  Send Updates </a></li>
                         <li><a href = "">  Schedule Training </a></li>
                         <li><a href = "">  Create Record </a></li>
                         <li><a href = "">  Update Records </a></li>

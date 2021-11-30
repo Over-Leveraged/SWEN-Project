@@ -1,0 +1,102 @@
+body{
+    margin: 5%;
+    width: 100%;
+}
+
+nav{    
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* float: right; */
+    /* grid-row: 1; */
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.navBar{
+    flex: 1;
+    /* text-align: right; */
+
+}
+.navBar ul li{
+
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-align: right;
+    float: right;
+}
+
+.navBar ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navBar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navBar ul li:hover::after{
+    width: 100%;
+
+}
+
+.container{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;   
+    grid-template-rows: 50px;
+    grid-column-gap:20px;
+}
+/* .form2{
+     background: aquamarine ; 
+}
+.form1{
+     background: rebeccapurple; 
+} */
+
+.form2 input, .form1 select{
+    margin-top:10px;
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+
+}
+
+.form2 textarea{
+    margin-top:10px;
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.form1 select{
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+button{
+    background-color: rgb(13, 28, 39);
+    color: #fff;
+    padding: 10px ;
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(9, 139, 214); 
+    cursor: pointer;
+}

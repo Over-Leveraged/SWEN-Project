@@ -85,7 +85,9 @@ td{
     text-align:center;
 }
 
+
 tr:hover{
     background-color: #5a67d89f;
     cursor: pointer;
+    transition: 1s;
 }

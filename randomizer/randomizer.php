@@ -1,7 +1,7 @@
 <?php
     $host = 'localhost';
     $dbname = 'records';
-    $username='admin';
+    $username='awalsh';
     $password='password123';
 
     //$location= filter_input(INPUT_GET, 'location',FILTER_SANITIZE_STRING);
@@ -32,7 +32,7 @@
     </thead>
     <?php foreach ($ranRows as $row): ?>
       <tr>
-          <td><?= $row['id']; ?></td>
+          <td><a href="notification.php" class = "idSelect"><?= $row['id']; ?></a></td>  
           <td><?= $row['fname']; ?></td>
           <td><?= $row['lname']; ?></td>
           <td><?= $row['medical_doc_expire']; ?></td>

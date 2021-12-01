@@ -6,7 +6,7 @@
         <title>Home</title>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
         <link href="styles/mstyles.css" rel="stylesheet" type="text/css">
-        <script src="randomizer/locationSend.js" type="text/javascript"></script>
+        
     </head>
     <body> 
         <section class = "header">
@@ -19,22 +19,29 @@
                         <li><a href = "view/schedule.php">  Schedule Training </a></li>
                         <li><a href = "">  Create Record </a></li>
                         <li><a href = "">  Update Records </a></li>
-                        <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li>
+                        <!-- <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li> -->
                     </ul>
                 </div>
             </nav> 
             <div class = "display">
+                <div class = "buttonContainers">
+                <label for = "namebtn">Sort By:</label>
+                <button type="submit" name = "namebtn" id="namebtn">Name</button>
+                <label for = "idbtn">Sort By:</label>
+                <button type="submit" name = "idbtn" id="idbtn">ID</button><br>
+                
+                </div>
                 <div id="result">
-                    <!-- officer will appear here -->
+                    <!-- officer will appear here -->                    
                     <table>
-                        <tr>
+                        <thead>
                             <th> ID </th>
                             <th> First Name</th>
                             <th> Last Name </th>
                             <th> Medical Expiration </th>
                             <th> PSRA Expiration </th>
                             <th> Police Record Expiration </th>
-                        </tr>
+                        </thead>
                         <?php 
 
                             include_once('dbconfig2.php'); 
@@ -52,7 +59,7 @@
                                 ?>
                                 <?php foreach ($eachh as $place): ?>
                                     <tr>
-                                        <td> <?= $place['id']; ?></td>  
+                                        <td><a href="notification.php" class = "idSelect"><?= $place['id']; ?></a></td>  
                                         <td> <?= $place['fname']; ?></td> 
                                         <td> <?= $place['lname']; ?></td>
                                         <td> <?= $place['medical_doc_expire']; ?></td>
@@ -62,7 +69,14 @@
                                 <?php endforeach; ?>
                     </table>
                 </div>
+                <button type ="submit" id ="officerRandomizer">Randomize Records</button>
             </div>
+            
         </section>
     </body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js" type="text/javascript"></script> 
+    <!-- <script src="randomizer/locationSend.js" type="text/javascript"></script> -->
+    
 </html>

@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Recepients Email</label><br>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="jane@doe.com" tabindex="2" required><br><br>
+                    <input type="email" class="form-control" id="emails" name="email" placeholder="jane@doe.com" required><br><br>
                 </div>
                 <div class="form-group">
                     <label for="subject" class="form-label">Subject</label><br>

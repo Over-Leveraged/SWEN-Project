@@ -6,7 +6,7 @@
         <title>Home</title>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
         <link href="styles/mstyles.css" rel="stylesheet" type="text/css">
-        <script></script>
+        <script src="randomizer/locationSend.js" type="text/javascript"></script>
     </head>
     <body> 
         <section class = "header">
@@ -19,6 +19,7 @@
                         <li><a href = "view/schedule.php">  Schedule Training </a></li>
                         <li><a href = "">  Create Record </a></li>
                         <li><a href = "">  Update Records </a></li>
+                        <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li>
                     </ul>
                 </div>
             </nav> 

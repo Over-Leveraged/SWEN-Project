@@ -1,17 +1,31 @@
-<?php include 'upload.php';?>
+<?php include '../model/upload.php';?>
 
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="../styles/create.css">
     <title>Create & add user</title>
   </head>
   <body>
 
 
     <div class="container">
-
+            <nav>
+                <h1 class = "sysname"><a href = "../mainPage.php">GDBS</a></h1>
+                
+                <div class = "navBar"> 
+                    <ul> 
+                        <li><a href = "../loginSystem.php">  Log Out </a></li>
+                        <li><a href = "../notification.php">  Send Updates </a></li>
+                        <li><a href = "schedule.php">  Schedule Training </a></li>
+                        <li><a href = "create.php">  Create Record </a></li>
+                        <li><a href = "">  Update Records </a></li>
+                        
+                        <!-- <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li> -->
+                    </ul>
+                </div>
+            </nav> 
 
       <div class="column">
       <h1>Create & add user</h1>
@@ -61,7 +75,7 @@
 
           <button id='btn' type="submit" name="save">Submit All</button>
         </form>
-<?php>   
+<?php   
   if ($conn->query($qStr)) {
     echo "File uploaded successfully";
   }

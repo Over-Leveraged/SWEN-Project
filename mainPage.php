@@ -15,10 +15,12 @@
                 
                 <div class = "navBar"> 
                     <ul> 
+                        <li><a href = "loginSystem.php">  Log Out </a></li>
                         <li><a href = "notification.php">  Send Updates </a></li>
                         <li><a href = "view/schedule.php">  Schedule Training </a></li>
-                        <li><a href = "">  Create Record </a></li>
+                        <li><a href = "view/create.php">  Create Record </a></li>
                         <li><a href = "">  Update Records </a></li>
+                        
                         <!-- <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li> -->
                     </ul>
                 </div>
@@ -72,7 +74,14 @@
                 <button type ="submit" id ="officerRandomizer">Randomize Records</button>
             </div>
             
+            
         </section>
+        <footer>
+            <div class="containerf">
+                <p>Swen Group Project: Akiel Walsh, Tahjay Thompson, Jada Calvin, Jelani Smith, Donique Forbes</p>
+            </div>
+        </footer>
+        
     </body>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

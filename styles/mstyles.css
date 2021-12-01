@@ -17,7 +17,7 @@ nav{
     /* grid-row: 1; */
 }
 .header {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     position: relative;
     display: inline-block;
@@ -142,4 +142,16 @@ button:hover{
     margin-right: 3%;
     font-weight: bold;
     font-size: larger;
+}
+footer{
+    text-align: center;
+    margin-top: 250px;
+    background-color: #3f3d56;
+    padding-bottom: 74px;
+}
+footer p{
+    padding-top:20px ;
+    font-size: 14px;
+    
+    color: #fdfdfd;
 }

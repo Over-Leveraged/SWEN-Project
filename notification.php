@@ -5,20 +5,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
         <link href="styles/notification.css" rel="stylesheet" type="text/css">
         <script></script>
     </head>
     
     <body>
-        <div class = "header">
+        <section class = "header">
                 <nav>
                     <h1 class = "sysname"><a href = "mainPage.php">GDBS</a></h1>
                     <div class = "navBar"> 
                         <ul> 
-                            <li><a href = "notification.php">  <p>Send Updates</p> </a></li>
-                            <li><a href = "">  <p>Schedule Training</p> </a></li>
-                            <li><a href = "">  <p>Create Record</p> </a></li>
-                            <li><a href = "">  <p>Update Records</p> </a></li>
+                        <li><a href = "loginSystem.php">  Log Out </a></li>
+                        <li><a href = "notification.php">  Send Updates </a></li>
+                        <li><a href = "view/schedule.php">  Schedule Training </a></li>
+                        <li><a href = "view/create.php">  Create Record </a></li>
+                        <li><a href = "">  Update Records </a></li>
                         </ul>
                     </div>
                 </nav>
@@ -49,7 +51,7 @@
                 </div>
                 <div class="form-group">
                     <label for="subject" class="form-label">Subject</label><br>
-                    <textarea type="text" value = ""class="form-control" id="subject" name="subject" placeholder="Hello There!" tabindex="3" required></textarea><br><br>
+                    <textarea type="text" value = ""class="form-control" id="subject" name="subject" placeholder="Hello There!"  required></textarea><br><br>
                 </div>
                 <div class="form-group">
                     <label for="message" class="form-label">Message</label><br>
@@ -61,7 +63,12 @@
                 </form>
             </div>
         </div>
-        </div>
+        </section>
+        <footer>
+            <div class="containerf">
+                <p>Swen Group Project: Akiel Walsh, Tahjay Thompson, Jada Calvin, Jelani Smith, Donique Forbes</p>
+            </div>
+        </footer>
     </body> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="notificationFunc.js" type="text/javascript"></script>

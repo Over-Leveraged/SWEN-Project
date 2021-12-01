@@ -1,66 +1,56 @@
 body {
-    margin: 5%;
-    width: 100%;
-    font-size: 16px;
+    margin: 0;
     font-size: 16px;
     font-family: 'Dosis', sans-serif;
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    grid-row: 1fr 1fr;
 }
 
-nav{    
-    background-color: #5A67D8;
+
+nav{ 
+    background-color: #3f3d56;   
     padding: 2% 6%;
     display: flex;
-    font-size: 16px;
     justify-content: space-between;
     align-items: center;
-    margin-top: -5%;
-    left: 5%;
     /* float: right; */
     /* grid-row: 1; */
 }
 .header {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     position: relative;
     display: inline-block;
 }
 .navBar{
-    font-size: 24px;
-    margin-right: 18%;
     flex: 1;
-    position: relative;
-    right: 10.5%;
     /* text-align: right; */
-}
-nav a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-.navBar p{
-    font-size: 16px;
-}
 
+}
 .navBar ul li{
-    
+
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
     text-align: right;
     float: right;
+
 }
 
 .navBar ul li a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .navBar ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #fdfdfd;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -68,31 +58,55 @@ nav a{
 
 .navBar ul li:hover::after{
     width: 100%;
+
 }
-nav h1::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+/* .titles{
+    margin-top: 4%;
+    margin-left: 5%;
+} */
+
+.sysname a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
 }
-nav h1 a:hover::after{
-    width: 100%;
+.display{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
 }
-.container{
+
+/* .container{
+    margin-top: 20px;
     width: auto;
+    height: 50vh;
     display: grid;
+    justify-content: center;
+    
     grid-template-columns: 1fr 2fr ;   
     grid-template-rows: 50px;
     grid-column-gap:20px;
+} */
+.container{
+    height: 50vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr ;
+    margin-left: 10%;
+    
+    
 }
+
 .form2{
-     background: aquamarine ; 
+     /* background: aquamarine ;  */
+     margin-top:5% ;
 }
 .form1{
-     background: rebeccapurple; 
+    /* background: rebeccapurple; */
+    margin-bottom: 210px;
+    
 } 
 
 .form2 input, .form1 select{
@@ -117,7 +131,7 @@ nav h1 a:hover::after{
 }
 
 button{
-    background-color: rgb(13, 28, 39);
+    background-color: #08080c;
     color: #fff;
     padding: 10px ;
     border-radius: 8px;
@@ -125,6 +139,17 @@ button{
 }
 
 button:hover{
-    background-color: #5A67D8; 
+    background-color: #3f3d56; 
     cursor: pointer;
+}
+footer{
+    text-align: center;
+    margin-top: 250px;
+    background-color: #3f3d56;
+    padding-bottom: 74px;
+}
+footer p{
+    padding-top:20px ;
+    font-size: 14px;
+    color: #ffffff;
 }

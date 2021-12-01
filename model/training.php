@@ -1,9 +1,10 @@
 <?php
-require_once 'dbconfig.php';
+
+require_once '../dbconfig2.php';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    // echo "Connected to $dbname at $host successfully.";    
+    echo "Connected to $dbname at $host successfully.";    
 } catch (PDOException $pe) {
     die("Could not connect to the database $dbname :" . $pe->getMessage());
 }
@@ -11,7 +12,8 @@ try {
 
 
 
-if(ISSET($_POST['save'])){
+//if(ISSET($_POST['save'])){
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $dest= 'training/';
 
     $MAX_SIZE=15 * 1024 * 1024;
@@ -30,6 +32,8 @@ if(ISSET($_POST['save'])){
 
     }
 }
+?>
+
 
 
 

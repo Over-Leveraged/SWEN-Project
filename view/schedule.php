@@ -1,6 +1,3 @@
-<?php include 'training.php';?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +12,7 @@
 
       <div class="column">
       <h1>Schedule Training</h1>
-        <form action="training.php" method="post" >
+        <form action="../model/training.php" method="post" >
 
             <label for="fname"> First Name:</label><br>
             <input id="input1" type="text" name="fname" required/> <br>

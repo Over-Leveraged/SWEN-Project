@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
         <link href="styles/mstyles.css" rel="stylesheet" type="text/css">
         <script></script>
     </head>
@@ -11,10 +12,11 @@
         <section class = "header">
             <nav>
                 <h1 class = "sysname"><a href = "mainPage.php">GDBS</a></h1>
+                
                 <div class = "navBar"> 
                     <ul> 
                         <li><a href = "notification.php">  Send Updates </a></li>
-                        <li><a href = "">  Schedule Training </a></li>
+                        <li><a href = "view/schedule.php">  Schedule Training </a></li>
                         <li><a href = "">  Create Record </a></li>
                         <li><a href = "">  Update Records </a></li>
                     </ul>
@@ -34,7 +36,7 @@
                         </tr>
                         <?php 
 
-                            include_once('model/dbconfig.php'); 
+                            include_once('dbconfig2.php'); 
                             try {
                                 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
                                 // echo "Connected to $dbname at $host successfully.";    

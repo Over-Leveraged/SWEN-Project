@@ -8,8 +8,21 @@
         <link href="styles/notification.css" rel="stylesheet" type="text/css">
         <script></script>
     </head>
+    
     <body>
-        <h1 id = "notifications"> DataBase System</h1>
+        <div class = "header">
+                <nav>
+                    <h1 class = "sysname"><a href = "mainPage.php">GDBS</a></h1>
+                    <div class = "navBar"> 
+                        <ul> 
+                            <li><a href = "notification.php">  <p>Send Updates</p> </a></li>
+                            <li><a href = "">  <p>Schedule Training</p> </a></li>
+                            <li><a href = "">  <p>Create Record</p> </a></li>
+                            <li><a href = "">  <p>Update Records</p> </a></li>
+                        </ul>
+                    </div>
+                </nav>
+        <!-- <h1 id = "notifications"> DataBase System</h1> -->
         <div class = "container"> 
             <div class = "form1"> 
                 <form> 
@@ -47,6 +60,7 @@
                 </div>
                 </form>
             </div>
+        </div>
         </div>
     </body> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

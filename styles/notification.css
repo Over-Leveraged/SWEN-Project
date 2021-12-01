@@ -1,13 +1,20 @@
-body{
+body {
     margin: 5%;
     width: 100%;
+    font-size: 16px;
+    font-family: -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
 nav{    
+    background-color: #5A67D8;
     padding: 2% 6%;
     display: flex;
+    font-size: 16px;
     justify-content: space-between;
     align-items: center;
+    margin-top: -5%;
+    left: 5%;
     /* float: right; */
     /* grid-row: 1; */
 }
@@ -18,12 +25,23 @@ nav{
     display: inline-block;
 }
 .navBar{
+    font-size: 24px;
+    margin-right: 18%;
     flex: 1;
+    position: relative;
+    right: 10.5%;
     /* text-align: right; */
-
 }
-.navBar ul li{
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.navBar p{
+    font-size: 16px;
+}
 
+.navBar ul li{
+    
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
@@ -50,9 +68,19 @@ nav{
 
 .navBar ul li:hover::after{
     width: 100%;
-
 }
-
+nav h1::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav h1 a:hover::after{
+    width: 100%;
+}
 .container{
     width: auto;
     display: grid;
@@ -60,12 +88,12 @@ nav{
     grid-template-rows: 50px;
     grid-column-gap:20px;
 }
-/* .form2{
+.form2{
      background: aquamarine ; 
 }
 .form1{
      background: rebeccapurple; 
-} */
+} 
 
 .form2 input, .form1 select{
     margin-top:10px;
@@ -84,7 +112,7 @@ nav{
 
 .form1 select{
     padding: 8px;
-    width: 50%;
+    width: 70%;
     border-radius: 5px;
 }
 
@@ -97,6 +125,6 @@ button{
 }
 
 button:hover{
-    background-color: rgb(9, 139, 214); 
+    background-color: #5A67D8; 
     cursor: pointer;
 }

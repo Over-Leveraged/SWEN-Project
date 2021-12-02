@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule Training</title>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
-        <link href="test.css" rel="stylesheet" type="text/css">
+        <link href="mystyle.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <section class = "header">

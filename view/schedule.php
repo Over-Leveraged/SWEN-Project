@@ -29,7 +29,7 @@
 
       <div class="form2">
       <h1 style="color:black;text-align:center;">SCHEDULE TRAINING</h1>
-        <form action="training.php" method="post" >
+          <form action="../model/training.php" method="post" >
 
 
             <label for="id"> ID:</label><br>

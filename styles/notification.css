@@ -1,9 +1,16 @@
-body{
-    margin: 5%;
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    display: grid;
     width: 100%;
+    min-height: 100%;
+    grid-row: 1fr 1fr;
 }
 
-nav{    
+
+nav{ 
+    background-color: #3f3d56;   
     padding: 2% 6%;
     display: flex;
     justify-content: space-between;
@@ -12,7 +19,7 @@ nav{
     /* grid-row: 1; */
 }
 .header {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     position: relative;
     display: inline-block;
@@ -30,19 +37,20 @@ nav{
     position: relative;
     text-align: right;
     float: right;
+
 }
 
 .navBar ul li a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .navBar ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #fdfdfd;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -52,20 +60,54 @@ nav{
     width: 100%;
 
 }
+/* .titles{
+    margin-top: 4%;
+    margin-left: 5%;
+} */
 
-.container{
+.sysname a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
+}
+.display{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container{
+    margin-top: 20px;
     width: auto;
+    height: 50vh;
     display: grid;
+    justify-content: center;
+    
     grid-template-columns: 1fr 2fr ;   
     grid-template-rows: 50px;
     grid-column-gap:20px;
+} */
+.container{
+    height: 50vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr ;
+    margin-left: 10%;
+    
+    
 }
-/* .form2{
-     background: aquamarine ; 
+
+.form2{
+     /* background: aquamarine ;  */
+     margin-top:5% ;
 }
 .form1{
-     background: rebeccapurple; 
-} */
+    /* background: rebeccapurple; */
+    margin-bottom: 210px;
+    
+} 
 
 .form2 input, .form1 select{
     margin-top:10px;
@@ -84,12 +126,12 @@ nav{
 
 .form1 select{
     padding: 8px;
-    width: 50%;
+    width: 70%;
     border-radius: 5px;
 }
 
 button{
-    background-color: rgb(13, 28, 39);
+    background-color: #08080c;
     color: #fff;
     padding: 10px ;
     border-radius: 8px;
@@ -97,6 +139,17 @@ button{
 }
 
 button:hover{
-    background-color: rgb(9, 139, 214); 
+    background-color: #3f3d56; 
     cursor: pointer;
+}
+footer{
+    text-align: center;
+    margin-top: 250px;
+    background-color: #3f3d56;
+    padding-bottom: 74px;
+}
+footer p{
+    padding-top:20px ;
+    font-size: 14px;
+    color: #ffffff;
 }

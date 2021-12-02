@@ -1,23 +1,30 @@
 window.onload=function(){
+
+    // $(".idSelect").click(function(event){
+    //     event.preventDefault();
+    //     console.log('clicked');
+    //     localStorage.setItem("Email","swenprojectemailer@gmail.com");
+
+    // })
+
     var search = document.getElementById("officerRandomizer");
     search.addEventListener('click',handleClick);
+
+    
 
 }
 
 var httpRequest = new XMLHttpRequest();
-var url = "randomizer.php";
+//var url = "randomizer.php";
 
 function handleClick(e){
 
     e.preventDefault();
-    
-
-    var url = "randomizer.php";
+    var url = "../SWEN-Project/randomizer/randomizer.php"
     //var location= document.getElementById("fillerForLocationName").value;
    // location=location.trim();
     
     //var sendToPhp=url+"?query="+location;
-
     httpRequest.onreadystatechange = getList();
 
     httpRequest.open('GET',url)

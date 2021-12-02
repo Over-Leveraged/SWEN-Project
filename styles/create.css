@@ -16,7 +16,7 @@ form{
     justify-content: center;
 
 }
-input{
+/input{
     padding:1em 0.5em;
     width:25em;
     margin:20px 0;
@@ -31,4 +31,4 @@ input{
 label{
     text-transform: capitalize;
     font-weight: 700;
-}
+} 

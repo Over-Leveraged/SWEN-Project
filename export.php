@@ -21,8 +21,13 @@ try {
     <table>
         <tr>
             <th>ID</th>
+<<<<<<< HEAD
+            <th>fname</th>
+         
+=======
             <th>First Name</th>
             <th>Last Name</th>
+>>>>>>> mainPage
         </tr>
 <?php 
 $result = $conn->query("SELECT * FROM addRec ORDER BY id ASC"); 
@@ -34,8 +39,12 @@ $records[] =$eachh;
 <?php foreach ($eachh as $place): ?>
     <tr>
         <td> <?= $place['id']; ?></td>  
+<<<<<<< HEAD
+        <td> <?= $place['fname']; ?></td>  
+=======
         <td> <?= $place['fname']; ?></td> 
         <td> <?= $place['lname']; ?></td> 
+>>>>>>> mainPage
     </tr>
 <?php endforeach; ?>
 </table>

@@ -1,14 +1,16 @@
 window.onload = function(){
     //var subject = $('#subjectInput').val();
-    
+    var officerEmail = localStorage.getItem("Email");
     $('.btnSelect').click(function(event){
 
         //names.value = "New Email";
         event.preventDefault();
+        
         var body = '';
         var topic = document.getElementById('topic').value
         document.getElementById('subject').value = topic;
         var msg = document.getElementById('message').value;
+        
        
         switch(topic){
             case "Training Schedule":
@@ -30,16 +32,18 @@ window.onload = function(){
                 body = ""
                 document.getElementById('message').value = body;
         }
-        console.log("clicked");
+        document.getElementById('emails').value = localStorage.getItem("Email");
+        console.log("clicked",typeof(officerEmail));
     })
 
     $('.btn').click(function(event){
 
         event.preventDefault();
-        var recEmail = document.getElementById('email').value;
+        var recEmail = document.getElementById('emails').value;
         var subject = document.getElementById('subject').value;
         var body = document.getElementById('message').value;
         var data = new FormData();
+
         
         data.append('email',recEmail);
         data.append('subject',subject);
@@ -50,6 +54,8 @@ window.onload = function(){
         xhr.open("POST","notificationScript.php");
         xhr.onload = function(){console.log(this.response);};
         xhr.send(data);
+        
+        localStorage.removeItem("Email");
 
     })
 

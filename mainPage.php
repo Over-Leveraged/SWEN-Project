@@ -19,7 +19,7 @@
                         <li><a href = "notification.php">  Send Updates </a></li>
                         <li><a href = "view/schedule.php">  Schedule Training </a></li>
                         <li><a href = "view/create.php">  Create Record </a></li>
-                        <li><a href = "">  Update Records </a></li>
+                        <li><a href = "export.php">  Export Records </a></li>
                         
                         <!-- <li><a href = "#" id="officerRandomizer">  Randomize Records </a></li> -->
                     </ul>

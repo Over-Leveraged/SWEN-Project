@@ -4,6 +4,8 @@ body {
     font-family: 'Dosis', sans-serif;
     display: grid;
     width: 100%;
+    min-height: 100%;
+    grid-row: 1fr 1fr;
 }
 
 
@@ -58,10 +60,10 @@ nav{
     width: 100%;
 
 }
-.titles{
+/* .titles{
     margin-top: 4%;
     margin-left: 5%;
-}
+} */
 
 .sysname a{
     color: rgb(255, 255, 255);
@@ -69,79 +71,67 @@ nav{
     text-align: left;
 }
 .display{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container{
+    margin-top: 20px;
+    width: auto;
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    
+    grid-template-columns: 1fr 2fr ;   
+    grid-template-rows: 50px;
+    grid-column-gap:20px;
+} */
+.container{
     height: 50vh;
     display:grid;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 1fr 2fr ;
+    margin-left: 10%;
+    
     
 }
-table { 
-    border-spacing: 20px 2px;
-    border-collapse: collapse;
-    box-shadow: 0 5px 10px lightgray;
-    text-align: left;
-    width: 800px;
-    /* margin-left: 25%;
-    margin-top: 10%; */
-    margin-top: 5%;
+
+.form2{
+     /* background: aquamarine ;  */
+     margin-top:5% ;
+}
+
+
+.form2 input, .form1 select{
+    margin-top:10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.form2 textarea{
+    margin-top:10px;
+    padding: 8px;
+    width: 50%;
     border-radius: 5px;
 }
-th{
-    text-align:center;
-    background-color: #3f3d56;
-    color:rgb(253, 247, 247);
-    /* border:1px solid #152D35; */
-    padding: 9px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-thead{
-    box-shadow: 0 5px 10px darkgray; 
-}
 
-td{
-    padding: 20px;
-    text-align:center;
-}
-tr:nth-child(even){
-    background-color: rgb(245, 245, 245);
-}
-td a{
-    text-decoration: none;
-
-}
-
-tr:hover{
-    background-color: #3f3d5659;
-    cursor: pointer;
-    transition: 0.5s;
-}
 
 button{
+    background-color: #08080c;
+    color: #fff;
+    padding: 10px ;
     border-radius: 8px;
-    padding: 6px;
     border: none;
-    min-width: 100px;
-    margin-right: 10%;
-    font-weight: bold;
-    font-size: 14px;
 }
+
 button:hover{
+    background-color: #3f3d56; 
     cursor: pointer;
-    background-color: #3f3d5659;
-}
-#officerRandomizer{
-    width: 25%;
-}
-
-.buttonContainers{
-    display: flex;
-}
-
-.buttonContainers label{
-    margin-right: 3%;
-    font-weight: bold;
-    font-size: larger;
 }
 footer{
     text-align: center;
@@ -152,6 +142,5 @@ footer{
 footer p{
     padding-top:20px ;
     font-size: 14px;
-    
-    color: #fdfdfd;
+    color: #ffffff;
 }

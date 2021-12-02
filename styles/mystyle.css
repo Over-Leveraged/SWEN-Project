@@ -1,115 +1,146 @@
-/* Style inputs with type="text", select elements and textareas */
-input[type=text] {
-  width: 75%; /* Half width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=number] {
-  width: 75%; /* Half width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=date] {
-  width: 75%; /* Half width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-
-/* Set a style for all buttons */
-button {
-  background-color: orange;
-  color: white;
-  padding: 14px;
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  cursor: pointer;
-  width: 65%;
-  opacity: 0.9;
-}
-
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    display: grid;
     width: 100%;
-    margin-top: 0;
-  }
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 0px 0px 0px 0;
-  display: inline-block;
-  color: black;
-  font-family: serif;
+    min-height: 100%;
+    grid-row: 1fr 1fr;
 }
 
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 0px;
-  background-color: #f2f2f2;
-  padding: 60px;
-  margin-top: 12px;
-  }
+nav{ 
+    background-color: #3f3d56;   
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* float: right; */
+    /* grid-row: 1; */
+}
+.header {
+    min-height: 50vh;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.navBar{
+    flex: 1;
+    /* text-align: right; */
+
+}
+.navBar ul li{
+
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-align: right;
+    float: right;
+
+}
+
+.navBar ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navBar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fdfdfd;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navBar ul li:hover::after{
+    width: 100%;
+
+}
+/* .titles{
+    margin-top: 4%;
+    margin-left: 5%;
+} */
+
+.sysname a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: left;
+}
+.display{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container{
+    margin-top: 20px;
+    width: auto;
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    
+    grid-template-columns: 1fr 2fr ;   
+    grid-template-rows: 50px;
+    grid-column-gap:20px;
+} */
+.container{
+    height: 50vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr ;
+    margin-left: 10%;
+    
+    
+}
+
+.form2{
+     /* background: aquamarine ;  */
+     margin-top:5% ;
+}
+
+
+.form2 input, .form1 select{
+    margin-top:10px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.form2 textarea{
+    margin-top:10px;
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+
+button{
+    background-color: #08080c;
+    color: #fff;
+    padding: 10px ;
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover{
+    background-color: #3f3d56; 
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    margin-top: 250px;
+    background-color: #3f3d56;
+    padding-bottom: 74px;
+}
+footer p{
+    padding-top:20px ;
+    font-size: 14px;
+    color: #ffffff;
+}
